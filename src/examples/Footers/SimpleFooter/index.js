@@ -28,26 +28,26 @@ import MKTypography from "components/MKTypography";
 // Material Kit 2 React base styles
 import typography from "assets/theme/base/typography";
 
-function SimpleFooter({ company, links, light }) {
-  const { href, name } = company;
+function SimpleFooter({ company, light }) {
+  const { href } = company;
   const { size } = typography;
 
-  const renderLinks = () =>
-    links.map((link, key) => (
-      <MKBox
-        key={link.name}
-        component="li"
-        pl={key === 0 ? 0 : 2}
-        pr={key === links.length - 1 ? 0 : 2}
-        lineHeight={1}
-      >
-        <Link href={link.href} target="_blank">
-          <MKTypography variant="button" fontWeight="regular" color={light ? "white" : "text"}>
-            {link.name}
-          </MKTypography>
-        </Link>
-      </MKBox>
-    ));
+  // const renderLinks = () =>
+  //   links.map((link, key) => (
+  //     <MKBox
+  //       key={link.name}
+  //       component="li"
+  //       pl={key === 0 ? 0 : 2}
+  //       pr={key === links.length - 1 ? 0 : 2}
+  //       lineHeight={1}
+  //     >
+  //       <Link href={link.href} target="_blank">
+  //         <MKTypography variant="button" fontWeight="regular" color={light ? "white" : "text"}>
+  //           {link.name}
+  //         </MKTypography>
+  //       </Link>
+  //     </MKBox>
+  //   ));
 
   return (
     <Container>
@@ -75,12 +75,11 @@ function SimpleFooter({ company, links, light }) {
           by
           <Link href={href} target="_blank">
             <MKTypography variant="button" fontWeight="medium" color={light ? "white" : "dark"}>
-              &nbsp;{name}&nbsp;
+              &nbsp;{"StrategicEdge Facility Management"}&nbsp;
             </MKTypography>
           </Link>
-          for a better web.
         </MKBox>
-        <MKBox
+        {/* <MKBox
           component="ul"
           sx={({ breakpoints }) => ({
             display: "flex",
@@ -98,7 +97,7 @@ function SimpleFooter({ company, links, light }) {
           })}
         >
           {renderLinks()}
-        </MKBox>
+        </MKBox> */}
       </MKBox>
     </Container>
   );
@@ -106,7 +105,7 @@ function SimpleFooter({ company, links, light }) {
 
 // Setting default values for the props of SimpleFooter
 SimpleFooter.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: { href: "https://login.salesforce.com/?locale=ap", name: "Creative Tim" },
   links: [
     { href: "https://www.creative-tim.com/", name: "Creative Tim" },
     { href: "https://www.creative-tim.com/presentation", name: "About Us" },

@@ -44,23 +44,24 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-presentation.jpg";
+import bgImage from "assets/images/mall.jpg";
 
 function Presentation() {
   return (
     <>
       <DefaultNavbar
         routes={routes}
-        action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
-          color: "info",
-        }}
+        // action={{
+        //   type: "external",
+        //   route: "https://www.creative-tim.com/product/material-kit-react",
+        //   label: "Get Started",
+        //   color: "info",
+        // }}
         sticky
       />
+
       <MKBox
-        minHeight="75vh"
+        minHeight="100vh"
         width="100%"
         sx={{
           backgroundImage: `url(${bgImage})`,
@@ -74,7 +75,7 @@ function Presentation() {
           <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
             <MKTypography
               variant="h1"
-              color="white"
+              color="Black"
               mt={-6}
               mb={1}
               sx={({ breakpoints, typography: { size } }) => ({
@@ -83,17 +84,18 @@ function Presentation() {
                 },
               })}
             >
-              Material Kit 2 React{" "}
+              Website Homepage{" "}
             </MKTypography>
             <MKTypography
               variant="body1"
-              color="white"
+              color="Black"
               textAlign="center"
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Free & Open Source Web UI Kit built over ReactJS &amp; MUI. Join over 1.6 million
-              developers around the world.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut lorem nulla. Maecenas a
+              neque nisl. Nam a neque velit. Donec non finibus nibh. Phasellus nisi lectus, faucibus
+              a pretium in, semper ac est.
             </MKTypography>
           </Grid>
         </Container>

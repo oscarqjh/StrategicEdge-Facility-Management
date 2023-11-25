@@ -25,17 +25,17 @@ import MKTypography from "components/MKTypography";
 import HorizontalTeamCard from "examples/Cards/TeamCards/HorizontalTeamCard";
 
 // Images
-import team1 from "assets/images/team-5.jpg";
-import team2 from "assets/images/bruce-mars.jpg";
-import team3 from "assets/images/ivana-squares.jpg";
-import team4 from "assets/images/ivana-square.jpg";
+import team1 from "assets/images/profilePlaceholder.webp";
+// import team2 from "assets/images/bruce-mars.jpg";
+// import team3 from "assets/images/ivana-squares.jpg";
+// import team4 from "assets/images/ivana-square.jpg";
 
 function Team() {
   return (
     <MKBox
       component="section"
       variant="gradient"
-      bgColor="dark"
+      bgColor="white"
       position="relative"
       py={6}
       px={{ xs: 2, lg: 0 }}
@@ -44,12 +44,11 @@ function Team() {
       <Container>
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
-            <MKTypography variant="h3" color="white">
+            <MKTypography variant="h3" color="grey">
               The Executive Team
             </MKTypography>
-            <MKTypography variant="body2" color="white" opacity={0.8}>
-              There&apos;s nothing I really wanted to do in life that I wasn&apos;t able to get good
-              at. That&apos;s my skill.
+            <MKTypography variant="body2" color="grey" opacity={0.8}>
+              The brains behind the madness.
             </MKTypography>
           </Grid>
         </Grid>
@@ -58,39 +57,54 @@ function Team() {
             <MKBox mb={1}>
               <HorizontalTeamCard
                 image={team1}
-                name="Emma Roberts"
-                position={{ color: "info", label: "UI Designer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="Leonard Chia"
+                position={{ color: "info", label: "Database Engineer" }}
+                description="My passion is designing good database architecture. I love my job."
+                email="lchia@buffalo.edu"
               />
             </MKBox>
           </Grid>
           <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
-                image={team2}
-                name="William Pearce"
-                position={{ color: "info", label: "Boss" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                image={team1}
+                name="Andrea Boey"
+                position={{ color: "info", label: "Database Engineer" }}
+                description="My passion is designing good database architecture. I love my job."
+                email="aboey@buffalo.edu"
               />
             </MKBox>
           </Grid>
           <Grid item xs={12} lg={6}>
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
-                image={team3}
-                name="Ivana Flow"
-                position={{ color: "info", label: "Athlete" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                image={team1}
+                name="Stanley Heok"
+                position={{ color: "info", label: "Database Engineer" }}
+                description="My passion is designing good database architecture. I love my job."
+                email="sheok@buffalo.edu"
               />
             </MKBox>
           </Grid>
           <Grid item xs={12} lg={6}>
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
-                image={team4}
-                name="Marquez Garcia"
-                position={{ color: "info", label: "JS Developer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                image={team1}
+                name="Yi Xuan Lau"
+                position={{ color: "info", label: "Database Engineer" }}
+                description="My passion is designing good database architecture. I love my job."
+                email="ylau9@buffalo.edu"
+              />
+            </MKBox>
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <MKBox mb={{ xs: 1, lg: 0 }}>
+              <HorizontalTeamCard
+                image={team1}
+                name="Sharlyn Wong"
+                position={{ color: "info", label: "Database Engineer" }}
+                description="My passion is designing good database architecture. I love my job."
+                email="sharlynx@buffalo.edu"
               />
             </MKBox>
           </Grid>

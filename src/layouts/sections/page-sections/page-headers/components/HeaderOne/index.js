@@ -42,7 +42,7 @@ function HeaderOne() {
               py={0.8125}
               mr={2}
             >
-              Material Design
+              Leonard
             </MKTypography>
             <MKButton
               variant="outlined"

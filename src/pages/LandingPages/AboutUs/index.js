@@ -25,20 +25,22 @@ import MKButton from "components/MKButton";
 
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
+// import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // About Us page sections
-import Information from "pages/LandingPages/AboutUs/sections/Information";
+// import Information from "pages/LandingPages/AboutUs/sections/Information";
 import Team from "pages/LandingPages/AboutUs/sections/Team";
-import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
-import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
+// import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
+// import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
 
 // Routes
 import routes from "routes";
-import footerRoutes from "footer.routes";
+// import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-about-us.jpg";
+import bgImage from "assets/images/atrium3.jpg";
+import SimpleFooter from "examples/Footers/SimpleFooter";
+// import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
@@ -55,7 +57,7 @@ function AboutUs() {
         light
       />
       <MKBox
-        minHeight="75vh"
+        minHeight="85vh"
         width="100%"
         sx={{
           backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
@@ -89,16 +91,22 @@ function AboutUs() {
                 },
               })}
             >
-              Work with an amazing design
+              About Our Project
             </MKTypography>
             <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
               We&apos;re constantly trying to express ourselves and actualize our dreams. If you
               have the opportunity to play this game
             </MKTypography>
-            <MKButton color="default" sx={{ color: ({ palette: { dark } }) => dark.main }}>
-              create account
+            <MKButton
+              component={"a"}
+              href={"https://login.salesforce.com/?locale=ap"}
+              target="_blank"
+              color="default"
+              sx={{ color: ({ palette: { dark } }) => dark.main }}
+            >
+              Database
             </MKButton>
-            <MKTypography variant="h6" color="white" mt={8} mb={1}>
+            {/* <MKTypography variant="h6" color="white" mt={8} mb={1}>
               Find us on
             </MKTypography>
             <MKBox display="flex" justifyContent="center" alignItems="center">
@@ -114,7 +122,7 @@ function AboutUs() {
               <MKTypography component="a" variant="body1" color="white" href="#">
                 <i className="fab fa-google-plus" />
               </MKTypography>
-            </MKBox>
+            </MKBox> */}
           </Grid>
         </Container>
       </MKBox>
@@ -127,13 +135,14 @@ function AboutUs() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Information />
+        {/* <Information /> */}
         <Team />
-        <Featuring />
-        <Newsletter />
+        {/* <Featuring />
+        <Newsletter /> */}
       </Card>
       <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
+        {/* <DefaultFooter content={footerRoutes} /> */}
+        <SimpleFooter />
       </MKBox>
     </>
   );
